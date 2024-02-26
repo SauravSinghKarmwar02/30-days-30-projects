@@ -1,0 +1,100 @@
+/* Import Google Font 'Poppins' */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Hero section styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+
+/* Container for clock */
+.container {
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Clock styles */
+.clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+/* Background elements */
+.container::before {
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+.container::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50%;
+    z-index: -1;
+}
+
+/* Clock digit styles */
+.clock span {
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+/* Clock digit labels */
+.clock span::after {
+    content: '';
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50px;
+    transform: translate(-50%);
+}
+
+/* Label for hours */
+#hrs::after {
+    content: 'HOURS';
+}
+
+/* Labels for minutes */
+#min::after {
+    content: 'MINS';
+}
+
+/* Labels for seconds */
+#sec::after {
+    content: 'SEC';
+}

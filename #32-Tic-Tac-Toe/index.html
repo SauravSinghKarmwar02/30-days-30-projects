@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>Tic Tac Toe</title>
+        <!-- Link external stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Link fontAwesome kit -->
+        <script
+            src="https://kit.fontawesome.com/02fb10fd4a.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <main>
+            <div class="game">
+                <button class="box brdRight brdBottom brdTLrd"></button>
+                <button class="box brdBottom brdRight"></button>
+                <button class="box brdBottom brdTRrd"></button>
+                <button class="box brdBottom brdRight"></button>
+                <button class="box brdBottom brdRight"></button>
+                <button class="box brdBottom"></button>
+                <button class="box brdRight brdBLrd"></button>
+                <button class="box brdRight"></button>
+                <button class="box brdBRrd"></button>
+            </div>
+            <button id="reset">Reset</button>
+        </main>
+
+        <!-- Winner banner -->
+        <div class="winner">
+            <i class="fa-solid fa-xmark close"></i>
+            Congratulations!, Winner is <span class="winUser"></span>
+        </div>
+
+        <!-- Link external script -->
+        <script src="app.js"></script>
+    </body>
+</html>

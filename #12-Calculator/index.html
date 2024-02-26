@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <!-- Linking external stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Container for the calculator -->
+        <div class="container">
+            <!-- Calculator with form for input buttons -->
+            <div class="calculator">
+                <form>
+                    <!-- Display area for the calculator -->
+                    <div class="display">
+                        <input type="text" name="display" />
+                    </div>
+                    <!-- Row1 of calculator buttons -->
+                    <div>
+                        <!-- Operator buttons with onclick actions -->
+                        <input
+                            type="button"
+                            value="AC"
+                            class="btn operator"
+                            onclick="display.value = ''"
+                        />
+                        <input
+                            type="button"
+                            value="DE"
+                            class="btn operator"
+                            onclick="display.value = display.value.toString().slice(0,-1)"
+                        />
+                        <input
+                            type="button"
+                            value="."
+                            class="btn operator"
+                            onclick="display.value += '.'"
+                        />
+                        <input
+                            type="button"
+                            value="/"
+                            class="btn operator"
+                            onclick="display.value += '/'"
+                        />
+                    </div>
+                    <!-- Row2 of calculator buttons -->
+                    <div>
+                        <input
+                            type="button"
+                            value="7"
+                            class="btn"
+                            onclick="display.value += '7'"
+                        />
+                        <input
+                            type="button"
+                            value="8"
+                            class="btn"
+                            onclick="display.value += '8'"
+                        />
+                        <input
+                            type="button"
+                            value="9"
+                            class="btn"
+                            onclick="display.value += '9'"
+                        />
+                        <input
+                            type="button"
+                            value="*"
+                            class="btn operator"
+                            onclick="display.value += '*'"
+                        />
+                    </div>
+                    <!-- Row3 of calculator buttons -->
+                    <div>
+                        <input
+                            type="button"
+                            value="4"
+                            class="btn"
+                            onclick="display.value += '4'"
+                        />
+                        <input
+                            type="button"
+                            value="5"
+                            class="btn"
+                            onclick="display.value += '5'"
+                        />
+                        <input
+                            type="button"
+                            value="6"
+                            class="btn"
+                            onclick="display.value += '6'"
+                        />
+                        <input
+                            type="button"
+                            value="-"
+                            class="btn operator"
+                            onclick="display.value += '-'"
+                        />
+                    </div>
+                    <!-- Row4 of calculator buttons -->
+                    <div>
+                        <input
+                            type="button"
+                            value="1"
+                            class="btn"
+                            onclick="display.value += '1'"
+                        />
+                        <input
+                            type="button"
+                            value="2"
+                            class="btn"
+                            onclick="display.value += '2'"
+                        />
+                        <input
+                            type="button"
+                            value="3"
+                            class="btn"
+                            onclick="display.value += '3'"
+                        />
+                        <input
+                            type="button"
+                            value="+"
+                            class="btn operator"
+                            onclick="display.value += '+'"
+                        />
+                    </div>
+                    <!-- Row5 of calculator buttons -->
+                    <div>
+                        <input
+                            type="button"
+                            value="00"
+                            class="btn"
+                            onclick="display.value += '00'"
+                        />
+                        <input
+                            type="button"
+                            value="0"
+                            class="btn"
+                            onclick="display.value += '0'"
+                        />
+                        <input
+                            type="button"
+                            value="="
+                            class="btn equal operator"
+                            onclick="display.value = eval(display.value) "
+                        />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

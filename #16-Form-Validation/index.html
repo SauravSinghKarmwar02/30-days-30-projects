@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of webpage -->
+        <title>Form Validation</title>
+        <!-- Linking external stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Linking font awesome kit -->
+        <script
+            src="https://kit.fontawesome.com/02fb10fd4a.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- Container -->
+        <div class="container">
+            <!-- form -->
+            <form>
+                <!-- icon -->
+                <i class="fa solid fa-paper-plane"></i>
+                <!-- Ask Name -->
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        id="contact-name"
+                        onkeyup="validateName()"
+                    />
+                    <span id="name-error"></span>
+                </div>
+                <!-- Ask phone no. -->
+                <div class="input-group">
+                    <label>Phone No.</label>
+                    <input
+                        type="tel"
+                        placeholder="123 456 7890"
+                        id="contact-phone"
+                        onkeyup="validatePhone()"
+                    />
+                    <span id="phone-error"></span>
+                </div>
+                <!-- Ask email id -->
+                <div class="input-group">
+                    <label>Email Id</label>
+                    <input
+                        type="email"
+                        placeholder="Enter Email"
+                        id="contact-email"
+                        onkeyup="validateEmail()"
+                    />
+                    <span id="email-error"></span>
+                </div>
+                <!-- Ask message -->
+                <div class="input-group">
+                    <label>Your Message</label>
+                    <textarea
+                        rows="5"
+                        placeholder="Enter your message"
+                        id="contact-message"
+                        onkeyup="validateMessage()"
+                    ></textarea>
+                    <span id="message-error"></span>
+                </div>
+                <!-- Button -->
+                <button onclick="return validateForm()">Submit</button>
+                <span id="submit-error"></span>
+            </form>
+            <!-- End of form -->
+        </div>
+        <!-- End of container -->
+
+        <!-- Linking external Js file -->
+        <script src="script.js"></script>
+    </body>
+</html>
